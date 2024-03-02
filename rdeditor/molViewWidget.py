@@ -1,7 +1,8 @@
 #!/usr/bin/python
 #Import required modules
 from __future__ import print_function
-from PySide2 import QtCore, QtGui, QtSvg, QtWidgets
+from PySide6 import QtCore, QtGui, QtSvg, QtWidgets
+from PySide6 import QtSvgWidgets
 import sys
 from types import *
 import logging
@@ -15,7 +16,7 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Geometry.rdGeometry import Point2D
 
 #The Viewer Class
-class MolWidget(QtSvg.QSvgWidget):
+class MolWidget(QtSvgWidgets.QSvgWidget):
     def __init__(self, mol = None, parent=None):
         #Also init the super class
         super(MolWidget, self).__init__(parent)

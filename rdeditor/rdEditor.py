@@ -4,11 +4,11 @@ from __future__ import print_function
 
 # Import required modules
 import sys, time, os
-from PySide2.QtGui import *
-from PySide2.QtWidgets import *
-from PySide2.QtCore import QByteArray
-from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2 import QtSvg
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
+from PySide6.QtCore import QByteArray
+from PySide6 import QtCore, QtGui, QtWidgets
+from PySide6 import QtSvg
 
 #Import model
 from rdeditor.molEditWidget import MolEditWidget
@@ -299,7 +299,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                   triggered=self.openPtable)
 
         #Edit actions
-        self.actionActionGroup = QtWidgets.QActionGroup(self, exclusive=True)
+        self.actionActionGroup = QtGui.QActionGroup(self, exclusive=True)
         self.selectAction = QAction( QIcon(self.pixmappath + 'icons8-Cursor.png'), 'Se&lect',
                                    self, shortcut="Ctrl+L",
                                    statusTip="Select Atoms",
@@ -367,7 +367,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
         #BondTypeActions
-        self.bondtypeActionGroup = QtWidgets.QActionGroup(self, exclusive=True)
+        self.bondtypeActionGroup = QtGui.QActionGroup(self, exclusive=True)
 
         self.singleBondAction = QAction( QIcon(self.pixmappath + 'icons8-Single.png'), 'S&ingle Bond',
                                    self, shortcut="Ctrl+1",
